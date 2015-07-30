@@ -10,19 +10,22 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer');;
 
-var src = {
-  sass: './assets/*.scss'
+var paths = {
+  sass: {
+    src: 'assets/scss/*.scss',
+    dest: 'assets/css'
+  }
 };
 
 gulp.task('sass', function() {
-  gulp.src(src.sass)
+  gulp.src(paths.sass.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./assets'));
+    .pipe(gulp.dest(paths.sass.dest));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(src.sass, ['sass']);
+  gulp.watch(paths.sass.src, ['sass']);
 });;
 
 gulp.task('webserver', function() {
