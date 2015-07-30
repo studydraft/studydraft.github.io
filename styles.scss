@@ -1,3 +1,91 @@
-body {
+$color-primary: #8BC34A;
+$color-text: #212121;
+$color-accent: #EEE;
+$spacing-small: 2px;
+
+$breakpoints: (
+  mobile: 360px
+);
+
+@mixin greater-than($bp) {
+  $width: map-get($breakpoints, $bp);
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+* {
+  // border: 1px solid black;
+}
+
+.view {
   display: flex;
+  justify-content: center;
+  height: 100vh;
+  color: $color-text;
+
+  @include greater-than(mobile) {
+    align-items: center;
+  }
+}
+
+body {
+  background: $color-accent;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.promo {
+
+  max-width: 90vw;
+  margin-bottom: 20px;
+
+  @include greater-than(mobile) {
+    max-width: 50vw;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include greater-than(mobile) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+
+  &__logo {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px;
+  }
+
+  &__title {
+    font-size: 2.0em;
+    text-shadow: 1px 1px darken($color-accent, 50%);
+    margin: 0px;
+    padding: 0px;
+    @include greater-than(mobile) {
+      font-size: 3.0em;
+    }
+  }
+
+  &__content, &__signup {
+    font-size: 0.9em;
+    text-align: center;
+
+    @include greater-than(mobile) {
+      // font-size: 0.9em;
+    }
+
+  }
+
+  &__signup {
+    background-color: $color-primary;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
 }

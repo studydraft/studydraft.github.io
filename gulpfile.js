@@ -10,16 +10,20 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer');;
 
+var src = {
+  sass: './*.scss'
+};
+
 gulp.task('sass', function() {
-  gulp.src('./*.scss')
+  gulp.src(src.sass)
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./*.scss', ['sass']);
-})
+  gulp.watch(src.sass, ['sass']);
+});;
 
 gulp.task('webserver', function() {
   gulp.src('.')
@@ -29,4 +33,4 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('default', ['webserver', 'sass', 'watch']);
+gulp.task('default', ['watch', 'sass', 'webserver']);
