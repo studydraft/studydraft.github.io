@@ -64,7 +64,7 @@ body {
 
   &__title {
     font-size: 2.0em;
-    text-shadow: 1px 1px darken($color-accent, 30%);
+    text-shadow: 1px 0px 2px darken($color-accent, 30%);
     margin: 0px;
     padding: 0px;
     @include greater-than(mobile) {
@@ -79,8 +79,21 @@ body {
 
   &__signup {
     background-color: $color-primary;
+    border: 1px solid darken($color-primary, 5%);
     padding: 5px;
     border-radius: 3px;
+    box-shadow: 1px 0px 3px darken($color-accent, 30%);
+  }
+
+  &__footer {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: lighter;
+    color: lighten($color-text, 50%);
+    a {
+      color: lighten($color-text, 50%);
+      font-size: 0.8em;
+    }
   }
 
 }
