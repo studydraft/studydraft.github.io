@@ -4,7 +4,8 @@ $color-accent: #EEE;
 $spacing-small: 2px;
 
 $breakpoints: (
-  mobile: 360px
+  mobile: 400px,
+  desktop: 760px
 );
 
 @mixin greater-than($bp) {
@@ -36,12 +37,13 @@ body {
 
 .promo {
 
-  max-width: 90vw;
+  width: 90vw;
   margin-bottom: 20px;
 
   @include greater-than(mobile) {
     max-width: 50vw;
   }
+
 
   &__header {
     display: flex;
@@ -57,9 +59,15 @@ body {
   }
 
   &__logo {
-    max-width: 150px;
-    max-height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
+
+    @include greater-than(mobile) {
+      // width: 150px;
+      // height: 150px;
+    }
+
   }
 
   &__title {
