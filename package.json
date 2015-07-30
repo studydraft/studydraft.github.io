@@ -1,0 +1,26 @@
+{
+  "name": "studydraft.github.io",
+  "version": "0.0.1",
+  "description": "Landing page for StudyDraft app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studydraft/studydraft.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studydraft/studydraft.github.io/issues"
+  },
+  "homepage": "https://github.com/studydraft/studydraft.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-util": "^3.0.6",
+    "gulp-webserver": "^0.9.1"
+  }
+}
