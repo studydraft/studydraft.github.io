@@ -11,14 +11,14 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer');;
 
 var src = {
-  sass: './*.scss'
+  sass: './assets/*.scss'
 };
 
 gulp.task('sass', function() {
   gulp.src(src.sass)
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./assets'));
 });
 
 gulp.task('watch', function() {

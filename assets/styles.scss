@@ -16,7 +16,7 @@ $breakpoints: (
 }
 
 * {
-  // border: 1px solid black;
+  //border: 1px solid black;
 }
 
 .view {
@@ -37,11 +37,14 @@ body {
 
 .promo {
 
-  width: 90vw;
+  max-width: 100%;
+  padding: 10px;
   margin-bottom: 20px;
+  // margin-left: auto;
+  // margin-right: auto;
 
   @include greater-than(mobile) {
-    max-width: 50vw;
+    max-width: 500px;
   }
 
 
@@ -49,25 +52,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: justify;
 
-    @include greater-than(mobile) {
+    @include greater-than(desktop) {
       flex-direction: row;
       align-items: center;
       justify-content: center;
     }
-
   }
+
 
   &__logo {
     width: 100px;
     height: 100px;
     margin: 10px;
-
     @include greater-than(mobile) {
-      // width: 150px;
-      // height: 150px;
+      width: 150px;
+      height: 150px;
     }
-
   }
 
   &__title {
