@@ -4,7 +4,7 @@ $color-accent: #EEE;
 $spacing-small: 2px;
 
 $breakpoints: (
-  mobile: 400px,
+  mobile: 500px,
   desktop: 760px
 );
 
@@ -15,36 +15,108 @@ $breakpoints: (
   }
 }
 
-.hero {
-  height: 50vh;
-  width: 100vw;
-  margin-top: 50px;
-  background-image: url('/assets/img/hero-bg.jpg');
-  background-size: 100vw;
-  background-repeat: no-repeat;
-  background-position: 50% 25%;
-
-  &__content {
-    background-color:rgba(255, 255, 255, 0.5);
-    height: 100%;
-  }
-
-}
-
 .view {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+  padding-top: 50px;
   color: $color-text;
-
-  @include greater-than(mobile) {
-    align-items: center;
-  }
-}
-
-body {
   background: $color-accent;
   font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/assets/img/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+  background-size: auto 100vh;
+
+  @include greater-than(desktop) {
+    height: 50vh;
+    background-size: 100vw;
+  }
+
+}
+
+.hero-content {
+  background-color:rgba(1, 1, 1, 0.66);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+
+  @include greater-than(desktop) {
+    flex-direction: row;
+  }
+
+  &__primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  &__secondary {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    @include greater-than(mobile) {
+      text-align: left;
+      margin-left: 50px;
+    }
+
+  }
+
+  &__logo {
+    width: 140px;
+    height: 140px;
+    margin: 10px;
+    @include greater-than(mobile) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__title {
+    color: white;
+    font-size: 2.0em;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 800;
+    @include greater-than(mobile) {
+      font-size: 3.0em;
+    }
+  }
+
+  &__tag-line {
+    font-size: 1.0em;
+    font-weight: 500;
+    @include greater-than(mobile) {
+      font-size: 2.0em;
+    }
+
+  }
+
+  &__signup {
+    color: white;
+
+    & p {
+      @include greater-than(desktop) {
+        font-size: 1.5em;
+      }
+    }
+
+    @include greater-than(desktop) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+  }
 }
 
 .promo {
