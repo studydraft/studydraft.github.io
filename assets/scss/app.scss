@@ -162,81 +162,10 @@ body {
 .footer {
   background: $color-primary;
   padding-bottom: 20vh;
+  border-top: 5px solid black;
 
   @include greater-than(desktop) {
     padding: 5vh;
-  }
-
-}
-
-.promo {
-
-  max-width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-
-  @include greater-than(mobile) {
-    max-width: 500px;
-  }
-
-  &__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include greater-than(desktop) {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-
-  &__logo {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    @include greater-than(mobile) {
-      width: 150px;
-      height: 150px;
-    }
-  }
-
-  &__title {
-    font-size: 2.0em;
-    text-shadow: 1px 0px 2px darken($color-accent, 30%);
-    margin: 0px;
-    padding: 0px;
-    @include greater-than(mobile) {
-      font-size: 3.0em;
-    }
-  }
-
-  &__content, &__signup {
-    font-size: 1.1em;
-    text-align: center;
-  }
-
-  &__signup {
-    background-color: $color-primary;
-    border: 1px solid darken($color-primary, 5%);
-    padding: 5px;
-    border-radius: 3px;
-    box-shadow: 1px 0px 2px darken($color-accent, 30%);
-    & input {
-      width: auto;
-    }
-  }
-
-  &__footer {
-    margin-top: 10px;
-    text-align: center;
-    font-weight: lighter;
-    color: lighten($color-text, 50%);
-    a {
-      color: lighten($color-text, 50%);
-      font-size: 0.8em;
-    }
   }
 
 }
