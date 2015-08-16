@@ -26,7 +26,6 @@ body {
 }
 
 .view {
-  padding-top: 50px;
   color: $color-text;
   background: $color-accent;
   font-family: 'Montserrat', sans-serif;
@@ -133,7 +132,7 @@ body {
 }
 
 .intro {
-
+  // background-color: $color-primary;
   padding-bottom: 20vh;
   text-align: center;
   @include greater-than(desktop) {
@@ -161,7 +160,7 @@ body {
 }
 
 .footer {
-  background: $color-primary-dark;
+  background: $color-primary;
   padding-bottom: 20vh;
 
   @include greater-than(desktop) {
