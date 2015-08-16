@@ -1,4 +1,5 @@
 $color-primary: #8BC34A;
+$color-primary-dark: #727272;
 $color-text: #212121;
 $color-accent: #EEE;
 $spacing-small: 2px;
@@ -20,6 +21,8 @@ $breakpoints: (
   color: $color-text;
   background: $color-accent;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  // padding-bottom: 500px;
 }
 
 .hero {
@@ -95,7 +98,7 @@ $breakpoints: (
   }
 
   &__tag-line {
-    font-size: 1.0em;
+    font-size: 1.5em;
     font-weight: 500;
     @include greater-than(mobile) {
       font-size: 2.0em;
@@ -122,15 +125,19 @@ $breakpoints: (
 
 .intro {
 
+  padding-bottom: 20vh;
+  text-align: center;
   @include greater-than(desktop) {
-    margin-top: 50px;
+    min-height: 50vh;
+    // margin-top: 50px;
   }
 
 }
 
 .blurb {
   text-align: center;
-
+  margin-top: 30px;
+  margin-bottom: 30px;
   &__heading {
     padding-bottom: 10px;
     border-bottom: 1px solid $color-text;
@@ -140,6 +147,16 @@ $breakpoints: (
     @include greater-than(desktop) {
       font-size: 1.5em;
     }
+  }
+
+}
+
+.footer {
+  background: $color-primary-dark;
+  padding-bottom: 20vh;
+
+  @include greater-than(desktop) {
+    padding: 5vh;
   }
 
 }
