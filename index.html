@@ -22,7 +22,7 @@
   <link rel="icon" type="image/ico" href="assets/img/studydraft-fav.ico">
 
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css" media="screen" title="no title" charset="utf-8">
+  <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css" media="screen" title="no title" charset="utf-8"> -->
   <link rel="stylesheet" href="assets/css/app.css" media="screen" title="no title" charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
@@ -79,10 +79,10 @@
                 <div class="subscribe-form">
                   <div class="form-section">
                     <div class="form-group ml-field-email ml-validate-required ml-validate-email input-group">
-                      <input type="text" name="fields[email]" class="form-control input-sm" placeholder="Email*" value="" required>
+                      <input type="text" name="fields[email]" class="form-control" placeholder="Email*" value="" required>
                       <input type="hidden" name="ml-submit" value="1" />
                       <span class="input-group-btn">
-                        <button type="submit" class="btn btn-sm btn-default">Subscribe</button>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
                       </span>
                     </div>
                   </div>
@@ -92,34 +92,56 @@
           </div>
           <!-- Email form: end -->
         </section>
-        <div class="addthis_sharing_toolbox"></div>
+        <!-- <div class="addthis_sharing_toolbox"></div> -->
+        <!-- <div class="addthis_native_toolbox"></div> -->
       </section>
 
     </section>
 
-    <div class="container">
+    <section class="intro container">
+
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="blurb col-md-4">
+          <h2 class="blurb__heading">
+            Discover
+          </h2>
+          <p class="blurb__content">
+            Find other students studying the same material and courses as you.
+          </p>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="blurb col-md-4">
+          <h2 class="blurb__heading">
+            Connect
+          </h2>
+          <p class="blurb__content">
+            Easily reach students in your courses, join and plan study sessions, and manage study teams.
+          </p>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="blurb col-md-4">
+          <h2 class="blurb__heading">
+            Study
+          </h2>
+          <p class="blurb__content">
+            Study with the new pople you meet and the teams you form.
+          </p>
         </div>
-      </div>
+    </section>
 
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
+
+    <footer class="footer">
+
+        <div class="container">
+          <div class="row">
+            <div class="blurb col-md-4">
+
+            </div>
+          </div>
+        </div>
+
+    </footer>
+
+
     </div>
     <!-- /container -->
 
@@ -207,8 +229,11 @@
       ga('send', 'pageview');
     </script>
 
+
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55ba6e2a1b18551a" async="async"></script>
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 

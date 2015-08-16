@@ -29,6 +29,7 @@ $breakpoints: (
   background-repeat: no-repeat;
   background-position: 50% 25%;
   background-size: auto 100vh;
+  border-bottom: 5px solid black;
 
   @include greater-than(desktop) {
     height: 50vh;
@@ -119,6 +120,30 @@ $breakpoints: (
   }
 }
 
+.intro {
+
+  @include greater-than(desktop) {
+    margin-top: 50px;
+  }
+
+}
+
+.blurb {
+  text-align: center;
+
+  &__heading {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-text;
+  }
+
+  &__content {
+    @include greater-than(desktop) {
+      font-size: 1.5em;
+    }
+  }
+
+}
+
 .promo {
 
   max-width: 100%;
@@ -173,6 +198,9 @@ $breakpoints: (
     padding: 5px;
     border-radius: 3px;
     box-shadow: 1px 0px 2px darken($color-accent, 30%);
+    & input {
+      width: auto;
+    }
   }
 
   &__footer {
