@@ -87,7 +87,7 @@ main {
 
   &__scroll-down {
     display: flex;
-    align-self: center;
+    justify-content: center;
     font-size: 2.0em;
     @include greater-than(desktop) {
       display: none;
