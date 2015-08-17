@@ -88,6 +88,18 @@ body {
       .hero-content__secondary {
         text-align: left;
         margin-left: 50px; } }
+  .hero-content__scroll-down {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 2.0em; }
+    @media (min-width: 760px) {
+      .hero-content__scroll-down {
+        display: none; } }
   .hero-content__logo {
     width: 140px;
     height: 140px;
