@@ -90,7 +90,8 @@ body {
         margin-left: 50px; } }
     @media (min-width: 760px) {
       .hero-content__secondary {
-        font-size: 1.5em; } }
+        font-size: 1.5em;
+        max-width: 50vw; } }
   .hero-content__scroll-down {
     display: -webkit-box;
     display: -webkit-flex;
@@ -126,7 +127,7 @@ body {
     font-weight: 500; }
     @media (min-width: 500px) {
       .hero-content__tag-line {
-        font-size: 2.0em; } }
+        font-size: 1.7em; } }
   .hero-content__signup {
     color: white; }
     @media (min-width: 760px) {
