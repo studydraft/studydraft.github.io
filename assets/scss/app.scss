@@ -83,6 +83,10 @@ main {
       margin-left: 50px;
     }
 
+    @include greater-than(desktop) {
+      font-size: 1.5em;
+    }
+
   }
 
   &__scroll-down {
@@ -127,11 +131,11 @@ main {
   &__signup {
     color: white;
 
-    & p {
-      @include greater-than(desktop) {
-        font-size: 1.5em;
-      }
-    }
+    // & p {
+    //   @include greater-than(desktop) {
+    //     font-size: 1.5em;
+    //   }
+    // }
 
     @include greater-than(desktop) {
       margin-top: 20px;

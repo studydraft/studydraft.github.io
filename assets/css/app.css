@@ -88,6 +88,9 @@ body {
       .hero-content__secondary {
         text-align: left;
         margin-left: 50px; } }
+    @media (min-width: 760px) {
+      .hero-content__secondary {
+        font-size: 1.5em; } }
   .hero-content__scroll-down {
     display: -webkit-box;
     display: -webkit-flex;
@@ -126,9 +129,6 @@ body {
         font-size: 2.0em; } }
   .hero-content__signup {
     color: white; }
-    @media (min-width: 760px) {
-      .hero-content__signup p {
-        font-size: 1.5em; } }
     @media (min-width: 760px) {
       .hero-content__signup {
         margin-top: 20px;
